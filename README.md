@@ -1,1 +1,1 @@
-# openshift-streams-dashboard-build
+# rhosak-dashboard-build
