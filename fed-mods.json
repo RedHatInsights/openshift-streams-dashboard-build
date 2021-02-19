@@ -1,0 +1,11 @@
+{
+    "openshiftStreams": {
+        "entry": [
+            "/beta/apps/application-services/openshiftStreams.ad2c5db09420a9c100be.js"
+        ],
+        "modules": [
+            "/beta/apps/application-services/917.d938a15fc6b1cfc53f20.css",
+            "/beta/apps/application-services/917.a5d25df648ee006600bd.js"
+        ]
+    }
+}
