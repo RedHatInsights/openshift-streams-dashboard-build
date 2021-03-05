@@ -1,11 +1,11 @@
 {
     "openshiftStreams": {
         "entry": [
-            "/beta/apps/application-services/openshiftStreams.6c150dd02ea102280379.js"
+            "/beta/apps/application-services/openshiftStreams.fd57b6475dfa30adef92.js"
         ],
         "modules": [
-            "/beta/apps/application-services/917.d938a15fc6b1cfc53f20.css",
-            "/beta/apps/application-services/917.01441891d780f438a926.js"
+            "/beta/apps/application-services/639.082b28aebe1913a092a9.css",
+            "/beta/apps/application-services/639.6be69ab1c8dba5e41a79.js"
         ]
     }
 }
