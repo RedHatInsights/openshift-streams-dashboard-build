@@ -1,1 +1,0 @@
-(self.webpackChunkmk_ui_host=self.webpackChunkmk_ui_host||[]).push([[706,10],{85208:()=>{},6702:()=>{},12993:()=>{},1386:()=>{}}]);
