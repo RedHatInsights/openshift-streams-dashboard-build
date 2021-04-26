@@ -13,16 +13,23 @@ node {
       String APP_NAME = "application-services"
       String BRANCH = env.BRANCH_NAME.replaceAll("origin/", "")
 
+      BETA = false
       if (BRANCH == "prod-stable") {
         PREFIX = ""
       } else if (BRANCH == "prod-beta") {
         PREFIX = "beta/"
+        BETA = true
       } else if (BRANCH == "qa-stable") {
         PREFIX = "stage/"
       } else if (BRANCH == "qa-beta") {
         PREFIX = "stage/beta/"
+        BETA = true
       } else {
         error "Bug: invalid branch name, we only support (prod/qa)-(beta/stable) and we got ${BRANCH}"
+      }
+
+      if (BETA == true) {
+        sed -i .bak 's/\/beta\/apps\/chrome\/snippets\//\/apps\/chrome\/snippets\//' src/index.html
       }
 
       // Write build info into app.info.json
