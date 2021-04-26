@@ -32,6 +32,9 @@ node {
         sh """
           sed -i 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' index.html
           echo "updated ESI paths to non-beta"
+          echo "-------------"
+          cat index.html
+          echo "-------------"
         """
       }
 
