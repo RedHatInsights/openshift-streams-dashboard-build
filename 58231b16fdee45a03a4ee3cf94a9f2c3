@@ -30,7 +30,7 @@ node {
 
       if (BETA == true) {
         sh """
-          sed -i .bak 's/\/beta\/apps\/chrome\/snippets\//\/apps\/chrome\/snippets\//' src/index.html
+          sed -i .bak 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' src/index.html
         """
       }
 
