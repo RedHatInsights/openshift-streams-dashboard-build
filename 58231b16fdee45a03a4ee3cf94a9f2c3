@@ -29,7 +29,9 @@ node {
       }
 
       if (BETA == true) {
-        sed -i .bak 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' src/index.html
+        sh """
+          sed -i .bak 's/\/beta\/apps\/chrome\/snippets\//\/apps\/chrome\/snippets\//' src/index.html
+        """
       }
 
       // Write build info into app.info.json
