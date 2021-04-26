@@ -30,7 +30,7 @@ node {
 
       if (BETA == false) {
         sh """
-          sed -i .bak 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' src/index.html
+          sed -i '.bak' 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' src/index.html
           echo "updated ESI paths to non-beta"
         """
       }
