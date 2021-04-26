@@ -28,9 +28,10 @@ node {
         error "Bug: invalid branch name, we only support (prod/qa)-(beta/stable) and we got ${BRANCH}"
       }
 
-      if (BETA == true) {
+      if (BETA == false) {
         sh """
           sed -i .bak 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//' src/index.html
+          echo "updated ESI paths to non-beta"
         """
       }
 
