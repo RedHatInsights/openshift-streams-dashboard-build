@@ -1,1 +1,0 @@
-(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[706,10],{85208:()=>{},6702:()=>{},12993:()=>{},1386:()=>{}}]);

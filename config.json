@@ -1,6 +1,6 @@
 [
   {
-    "hostnames": [ "prod.foo.redhat.com" ],
+    "hostnames": ["prod.foo.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -14,8 +14,7 @@
       "kas": {
         "apiBasePath": "https://api.stage.openshift.com"
       },
-      "kafka": {
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.stage.openshift.com/auth",
         "clientId": "strimzi-ui",
@@ -33,12 +32,20 @@
         "guides": {
           "basePath": "http://localhost:9001",
           "fallbackBasePath": "/beta/apps/rhoas-guides-build"
+        },
+        "sr": {
+          "basePath": "http://localhost:9003",
+          "fallbackBasePath": "/beta/apps/sr-ui-build"
+        },
+        "srs": {
+          "basePath": "http://localhost:9005",
+          "fallbackBasePath": "/beta/apps/srs-ui-build"
         }
       }
     }
   },
   {
-    "hostnames": [ "qaprodauth.cloud.redhat.com" ],
+    "hostnames": ["qaprodauth.cloud.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -52,9 +59,7 @@
       "kas": {
         "apiBasePath": "https://api.stage.openshift.com"
       },
-      "kafka": {
-
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.stage.openshift.com/auth",
         "clientId": "strimzi-ui",
@@ -69,12 +74,18 @@
         },
         "guides": {
           "basePath": "/beta/apps/rhoas-guides-build"
+        },
+        "sr": {
+          "basePath": "/beta/apps/sr-control-plane-ui-build"
+        },
+        "srs": {
+          "basePath": "/beta/apps/srs-ui-build"
         }
       }
     }
   },
   {
-    "hostnames": [ "cloud.redhat.com" ],
+    "hostnames": ["cloud.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -88,8 +99,7 @@
       "kas": {
         "apiBasePath": "https://api.openshift.com"
       },
-      "kafka": {
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.openshift.com/auth",
         "clientId": "strimzi-ui",
@@ -104,6 +114,12 @@
         },
         "guides": {
           "basePath": "/beta/apps/rhoas-guides-build"
+        },
+        "sr": {
+          "basePath": "/beta/apps/sr-control-plane-ui-build"
+        },
+        "srs": {
+          "basePath": "/beta/apps/srs-ui-build"
         }
       }
     }
