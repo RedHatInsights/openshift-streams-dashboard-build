@@ -1,6 +1,6 @@
 [
   {
-    "hostnames": [ "prod.foo.redhat.com" ],
+    "hostnames": ["prod.foo.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -14,12 +14,37 @@
       "kas": {
         "apiBasePath": "https://api.stage.openshift.com"
       },
-      "kafka": {
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.stage.openshift.com/auth",
         "clientId": "strimzi-ui",
         "realm": "rhoas"
+      },
+      "apicurio_registry": {
+        "apiBasePath": ""
+      },
+      "srs": {
+        "apiBasePath": "https://api.stage.openshift.com"
+      },
+      "cos": {
+        "apiBasePath": "https://cos-fm.apps.kammellol.rhmw-integrations.net",
+        "configurators": {
+          "debezium-mongodb-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-mysql-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-postgres-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          }
+        }
       },
       "federatedModules": {
         "kas": {
@@ -33,12 +58,24 @@
         "guides": {
           "basePath": "http://localhost:9001",
           "fallbackBasePath": "/beta/apps/rhoas-guides-build"
+        },
+        "apicurio_registry": {
+          "basePath": "http://localhost:8888",
+          "fallbackBasePath": "/beta/apps/sr-ui-build"
+        },
+        "srs": {
+          "basePath": "http://localhost:9005",
+          "fallbackBasePath": "/beta/apps/srs-ui-build"
+        },
+        "cos": {
+          "basePath": "http://localhost:9002",
+          "fallbackBasePath": "/beta/apps/cos-ui-build"
         }
       }
     }
   },
   {
-    "hostnames": [ "qaprodauth.cloud.redhat.com" ],
+    "hostnames": ["qaprodauth.cloud.redhat.com", "qaprodauth.console.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -52,13 +89,37 @@
       "kas": {
         "apiBasePath": "https://api.stage.openshift.com"
       },
-      "kafka": {
-
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.stage.openshift.com/auth",
         "clientId": "strimzi-ui",
         "realm": "rhoas"
+      },
+      "apicurio_registry": {
+        "apiBasePath": ""
+      },
+      "srs": {
+        "apiBasePath": "https://api.stage.openshift.com"
+      },
+      "cos": {
+        "apiBasePath": "https://cos-fm.apps.kammellol.rhmw-integrations.net",
+        "configurators": {
+          "debezium-mongodb-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-mysql-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-postgres-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          }
+        }
       },
       "federatedModules": {
         "kas": {
@@ -69,12 +130,21 @@
         },
         "guides": {
           "basePath": "/beta/apps/rhoas-guides-build"
+        },
+        "apicurio_registry": {
+          "basePath": "/beta/apps/sr-ui-build"
+        },
+        "srs": {
+          "basePath": "/beta/apps/srs-ui-build"
+        },
+        "cos": {
+          "basePath": "/beta/apps/cos-ui-build"
         }
       }
     }
   },
   {
-    "hostnames": [ "cloud.redhat.com" ],
+    "hostnames": ["cloud.redhat.com", "console.redhat.com"],
     "config": {
       "serviceDown": false,
       "guides": {
@@ -88,12 +158,37 @@
       "kas": {
         "apiBasePath": "https://api.openshift.com"
       },
-      "kafka": {
-      },
+      "kafka": {},
       "masSso": {
         "authServerUrl": "https://identity.api.openshift.com/auth",
         "clientId": "strimzi-ui",
         "realm": "rhoas"
+      },
+      "apicurio_registry": {
+        "apiBasePath": ""
+      },
+      "srs": {
+        "apiBasePath": "https://api.openshift.com"
+      },
+      "cos": {
+        "apiBasePath": "https://api.openshift.com",
+        "configurators": {
+          "debezium-mongodb-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-mysql-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          },
+          "debezium-postgres-1.5.0.Final": {
+            "remoteEntry": "https://dbz-ui.apps.kammellol.rhmw-integrations.net/dbz-connector-configurator.remoteEntry.js",
+            "scope": "debezium_ui",
+            "module": "./config"
+          }
+        }
       },
       "federatedModules": {
         "kas": {
@@ -104,6 +199,15 @@
         },
         "guides": {
           "basePath": "/beta/apps/rhoas-guides-build"
+        },
+        "srs": {
+          "basePath": "/beta/apps/srs-ui-build"
+        },
+        "apicurio_registry": {
+          "basePath": "/beta/apps/sr-ui-build"
+        },
+        "cos": {
+          "basePath": "/beta/apps/cos-ui-build"
         }
       }
     }
