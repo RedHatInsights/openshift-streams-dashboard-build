@@ -1,0 +1,2 @@
+(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[1285],{91285:(e,t,n)=>{"use strict";n.r(t),n.d(t,{ResourcesPage:()=>r,default:()=>s});var a=n(85859),c=n(75418),u=n.n(c),l=n(82249),r=function(){return u().createElement(a.I,{scope:"guides",module:"./QuickStartCatalog",fallback:u().createElement(l.gb,null),render:function(e){return u().createElement(e,null)}})};const s=r}}]);
+//# sourceMappingURL=1285.2b0a28dba909b7eeb258.js.map
