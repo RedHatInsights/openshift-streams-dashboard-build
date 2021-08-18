@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://application-services-ui/./src/app/pages/Resources/QuickStartDrawerFederated.scss"],"names":[],"mappings":"AAAA,uBAEI","file":"e8750ff0.css","sourcesContent":[".mas-quickstart-drawer {\n    // subtract the header height\n    height: calc(100vh - 76px) !important;\n}\n"],"sourceRoot":""}
