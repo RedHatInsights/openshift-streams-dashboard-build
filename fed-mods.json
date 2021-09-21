@@ -1,11 +1,10 @@
 {
     "applicationServices": {
         "entry": [
-            "/beta/apps/application-services/applicationServices.06394ab45c046c45477a.js",
-            "/beta/apps/application-services/applicationServices.00abddc1.css"
+            "/beta/apps/application-services/applicationServices.231212a6212917aae841.js"
         ],
         "modules": [
-            "/beta/apps/application-services/182.f8986e0db514c01e9ae8.js"
+            "/beta/apps/application-services/2182.b8f3186ba294aeff4d44.js"
         ]
     }
 }
