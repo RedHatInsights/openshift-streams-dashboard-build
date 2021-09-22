@@ -1,2 +1,0 @@
-:root{--ins-color--orange:#ec7a08}@keyframes spinner{to{transform:rotate(1turn)}}.ins-c-spinner{display:inline-flex}.ins-c-spinner.ins-m-center{display:flex;justify-content:center}.ins-c-spinner:before{animation:spinner 1s cubic-bezier(.4,0,.2,1) infinite;border:3px solid var(--pf-global--active-color--200);border-radius:50%;border-top-color:var(--pf-global--active-color--100);content:"";height:30px;height:1.875rem;width:30px;width:1.875rem}
-/*# sourceMappingURL=5ec8de41.css.map*/
