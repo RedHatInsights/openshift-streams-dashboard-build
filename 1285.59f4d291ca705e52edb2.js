@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[1285],{91285:(e,t,n)=>{n.r(t),n.d(t,{ResourcesPage:()=>l,default:()=>r});var a=n(75418),c=n.n(a),u=n(18520),l=function(){return c().createElement(u.IG,{scope:"guides",module:"./QuickStartCatalog",fallback:c().createElement(u.gb,null),render:function(e){return c().createElement(e,null)}})};const r=l}}]);
-//# sourceMappingURL=1285.59f4d291ca705e52edb2.js.map
