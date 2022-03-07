@@ -1,33 +1,41 @@
 {
   "federatedModules": {
     "kas": {
-      "basePath": "http://localhost:9000",
+      "basePath": "/mas-local-fm/kas",
+      "proxyTarget": "http://localhost:9000",
       "fallbackBasePath": "/beta/apps/rhosak-control-plane-ui-build"
     },
     "kafka": {
-      "basePath": "http://localhost:8080",
+      "basePath": "/mas-local-fm/kafka",
+      "proxyTarget": "http://localhost:8080",
       "fallbackBasePath": "/beta/apps/rhosak-data-plane-ui-build"
     },
     "guides": {
-      "basePath": "http://localhost:9001",
+      "basePath": "/mas-local-fm/guides",
+      "proxyTarget": "http://localhost:9001",
       "fallbackBasePath": "/beta/apps/rhoas-guides-build"
     },
     "apicurio_registry": {
-      "basePath": "http://localhost:8888",
+      "basePath": "/mas-local-fm/apicurio_registry",
+      "proxyTarget": "http://localhost:8888",
       "fallbackBasePath": "/beta/apps/sr-ui-build"
     },
     "srs": {
-      "basePath": "http://localhost:9005",
+      "basePath": "/mas-local-fm/srs",
+      "proxyTarget": "http://localhost:9005",
       "fallbackBasePath": "/beta/apps/srs-ui-build"
     },
     "cos": {
-      "basePath": "http://localhost:9002",
+      "basePath": "/mas-local-fm/cos",
+      "proxyTarget": "http://localhost:9002",
       "fallbackBasePath": "/beta/apps/cos-ui-build"
     }
   },
   "config": [
     {
-      "hostnames": ["prod.foo.redhat.com"],
+      "hostnames": [
+        "prod.foo.redhat.com"
+      ],
       "fetchConfig": true,
       "type": "proxy",
       "config": {
@@ -57,19 +65,9 @@
           "apiBasePath": "https://api.stage.openshift.com"
         },
         "cos": {
-          "apiBasePath": "https://cos-fleet-manager-cos.rh-fuse-153f1de160110098c1928a6c05e19444-0000.eu-de.containers.appdomain.cloud",
+          "apiBasePath": "https://wxn4aqqc8bqvxcy6unfe.api.stage.openshift.com",
           "configurators": {
-            "debezium-mongodb-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-mysql-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-postgres-1.5.0.Final": {
+            "debezium": {
               "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
               "scope": "debezium_ui",
               "module": "./config"
@@ -79,7 +77,10 @@
       }
     },
     {
-      "hostnames": ["qaprodauth.cloud.redhat.com", "qaprodauth.console.redhat.com"],
+      "hostnames": [
+        "qaprodauth.cloud.redhat.com",
+        "qaprodauth.console.redhat.com"
+      ],
       "config": {
         "serviceDown": false,
         "guides": {
@@ -107,19 +108,9 @@
           "basePath": "/api/rbac/v1"
         },
         "cos": {
-          "apiBasePath": "https://cos-fleet-manager-cos.rh-fuse-153f1de160110098c1928a6c05e19444-0000.eu-de.containers.appdomain.cloud",
+          "apiBasePath": "https://wxn4aqqc8bqvxcy6unfe.api.stage.openshift.com",
           "configurators": {
-            "debezium-mongodb-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-mysql-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-postgres-1.5.0.Final": {
+            "debezium": {
               "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
               "scope": "debezium_ui",
               "module": "./config"
@@ -129,7 +120,10 @@
       }
     },
     {
-      "hostnames": ["cloud.redhat.com", "console.redhat.com"],
+      "hostnames": [
+        "cloud.redhat.com",
+        "console.redhat.com"
+      ],
       "config": {
         "serviceDown": false,
         "guides": {
@@ -159,17 +153,7 @@
         "cos": {
           "apiBasePath": "https://api.openshift.com",
           "configurators": {
-            "debezium-mongodb-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-mysql-1.5.0.Final": {
-              "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
-              "scope": "debezium_ui",
-              "module": "./config"
-            },
-            "debezium-postgres-1.5.0.Final": {
+            "debezium": {
               "remoteEntry": "/beta/apps/dbz-ui-build/dbz-connector-configurator.remoteEntry.js",
               "scope": "debezium_ui",
               "module": "./config"
