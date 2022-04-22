@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[4720],{44720:(e,a,i)=>{i.r(a),i.d(a,{KafkaOverViewPage:()=>t,default:()=>u});var n=i(75418),c=i.n(n),s=i(38471),t=function(){return c().createElement(s.KafkaPage,null)};const u=t}}]);
-//# sourceMappingURL=4720.65feed17e98ed3b0e1f2.js.map
