@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[9611],{89611:(e,t,i)=>{function c(e,t){return c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e},c(e,t)}i.d(t,{Z:()=>c})}}]);
