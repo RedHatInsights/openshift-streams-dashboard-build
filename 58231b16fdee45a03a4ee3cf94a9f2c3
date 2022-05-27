@@ -13,16 +13,29 @@ node {
       String APP_NAME = "application-services"
       String BRANCH = env.BRANCH_NAME.replaceAll("origin/", "")
 
+      BETA = false
       if (BRANCH == "prod-stable") {
         PREFIX = ""
       } else if (BRANCH == "prod-beta") {
         PREFIX = "beta/"
-      } else if (BRANCH == "qa-stable" || BRANCH == "stage-stable") {
+        BETA = true
+      } else if (BRANCH == "qa-stable") {
         PREFIX = "stage/"
-      } else if (BRANCH == "qa-beta" || BRANCH == "stage-beta") {
+      } else if (BRANCH == "qa-beta") {
         PREFIX = "stage/beta/"
+        BETA = true
       } else {
-        error "Bug: invalid branch name, we only support (prod/qa/stage)-(beta/stable) and we got ${BRANCH}"
+        error "Bug: invalid branch name, we only support (prod/qa)-(beta/stable) and we got ${BRANCH}"
+      }
+
+      if (BETA == false) {
+        sh """
+          sed -i 's/\\/beta\\/apps\\/chrome\\/snippets\\//\\/apps\\/chrome\\/snippets\\//g' index.html
+          echo "updated ESI paths to non-beta"
+          echo "-------------"
+          cat index.html
+          echo "-------------"
+        """
       }
 
       // Write build info into app.info.json
@@ -45,7 +58,7 @@ node {
            eval `ssh-agent`
            ssh-add \"$privateKeyFile\"
            cp $AKAMAI_HOST_KEY ~/.ssh/known_hosts
-           chmod 600 ~/.ssh/known_hosts ~/.ssh/config
+           chmod 600 ~/.ssh/known_hosts
            n=0
            until [ \$n -ge 10 ]
            do
@@ -55,22 +68,27 @@ node {
            done
          """
       }
-      
+
       //Clear the cache for the app being deployed
-      openShiftUtils.withJnlpNode(
-        image: "quay.io/redhatqe/origin-jenkins-agent-akamai:4.9",
-        namespace: "insights-dev-jenkins"
-      ) {
+      openShiftUtils.withNode(image: "docker-registry.default.svc:5000/jenkins/jenkins-slave-base-centos7-python36:latest") {
         //install python dependencies
+        sh "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
+        sh "python3 get-pip.py --user"
         sh "wget https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/akamai_cache_buster/bustCache.py"
         sh "wget https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/akamai_cache_buster/requirements.txt"
-        sh "pip install -r requirements.txt"
+        sh "python3 -m pip install --user -r requirements.txt"
+        sh "export PATH=$PATH:/home/jenkins/.local/bin"
         withCredentials([file(credentialsId: "jenkins-eccu-cache-purge", variable: 'EDGERC')]) {
           //path to .edgerc file is now set to $EDGERC"
           //Bust the current cache
-          sh "python3 bustCache.py $EDGERC ${APP_NAME} ${BRANCH}"
+          sh "python3 bustCache.py $EDGERC ${APP_NAME}"
         }
       }
+
+      mail to: 'mas-devexp-ci@redhat.com',
+             subject: "Finished Running Pipeline: ${currentBuild.fullDisplayName}",
+             body: "The pipeline has completed this build: ${env.BUILD_URL}"
+
     }
   }
 }
