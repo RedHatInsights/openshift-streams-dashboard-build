@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[1586],{31586:(e,s,i)=>{i.r(s),i.d(s,{SettingsPage:()=>o,default:()=>c});var r=i(85893),t=i(17631),d=i(48844),n=i(5854),a=i(23173);const o=()=>{const e=(0,n.useConfig)();return(null==e?void 0:e.serviceDown)?(0,r.jsx)(a.dB,{},void 0):(0,r.jsx)(u,{},void 0)},u=()=>(0,r.jsx)(d.q,{breadcrumbId:"srs.settings",render:e=>(0,r.jsx)(t.P,{registry:e,module:"./FederatedSettingsPage"},void 0)},void 0),c=o}}]);
+//# sourceMappingURL=1586.09d7804c754fc0342f14.js.map

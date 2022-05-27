@@ -1,11 +1,11 @@
 {
     "applicationServices": {
         "entry": [
-            "/apps/application-services/applicationServices.03ee989f9354800aca12.js"
+            "/applicationServices.1653663872750.2ee6173354b864410242.js"
         ],
         "modules": [
-            "/apps/application-services/f4cd39fd.css",
-            "/apps/application-services/3495.958302bb20a1ed389052.js"
+            "/03b8944d.css",
+            "/482.e871615aadf61c8b95ad.js"
         ]
     }
 }
