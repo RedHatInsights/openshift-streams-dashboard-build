@@ -32,8 +32,8 @@
     },
     "ads": {
       "basePath": "/mas-local-fm/ads",
-      "proxyTarget": "",
-      "fallbackBasePath": ""
+      "proxyTarget": "http://localhost:9009",
+      "fallbackBasePath": "/beta/apps/ads-ui-build"
     },
     "smart_events": {
       "basePath": "/mas-local-fm/smart_events",
@@ -74,6 +74,9 @@
         "srs": {
           "apiBasePath": "https://api.stage.openshift.com"
         },
+        "ads": {
+          "editorsBasePath": "http://localhost:9011"
+        },
         "cos": {
           "apiBasePath": "https://wxn4aqqc8bqvxcy6unfe.api.stage.openshift.com",
           "configurators": {
@@ -83,9 +86,6 @@
               "module": "./config"
             }
           }
-        },
-        "ads": {
-          "editorsBasePath": ""
         },
         "smart_events": {
           "apiBasePath": "https://lcstem2z9g006s6.api.stage.openshift.com"
@@ -120,6 +120,9 @@
         "srs": {
           "apiBasePath": "https://api.stage.openshift.com"
         },
+        "ads": {
+          "editorsBasePath": "https://qaprodauth.console.redhat.com/beta/apps/ads-editors-build/index.html"
+        },
         "rbac": {
           "basePath": "/api/rbac/v1"
         },
@@ -132,9 +135,6 @@
               "module": "./config"
             }
           }
-        },
-        "ads": {
-          "editorsBasePath": ""
         },
         "smart_events": {
           "apiBasePath": "https://lcstem2z9g006s6.api.stage.openshift.com"
@@ -169,6 +169,9 @@
         "srs": {
           "apiBasePath": "https://api.openshift.com"
         },
+        "ads": {
+          "editorsBasePath": "https://console.redhat.com/beta/apps/ads-editors-build/index.html"
+        },
         "rbac": {
           "basePath": "/api/rbac/v1"
         },
@@ -181,9 +184,6 @@
               "module": "./config"
             }
           }
-        },
-        "ads": {
-          "editorsBasePath": ""
         },
         "smart_events": {
           "apiBasePath": ""
