@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[4302],{54302:(a,c,e)=>{e.d(c,{V:()=>s,Z:()=>i});const s={name:"--pf-chart-color-black-500",value:"#6a6e73",var:"var(--pf-chart-color-black-500, #6a6e73)"},i=s}}]);
+//# sourceMappingURL=4302.6b8686f0d5cae2e56c33.js.map
