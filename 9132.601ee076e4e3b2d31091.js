@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[9132],{9132:(a,e,s)=>{s.r(e),s.d(e,{KafkaOverViewPage:()=>p,default:()=>u});var i=s(85893),c=s(37810);const p=()=>(0,i.jsx)(c.KafkaPageV2,{}),u=p}}]);
-//# sourceMappingURL=9132.601ee076e4e3b2d31091.js.map
