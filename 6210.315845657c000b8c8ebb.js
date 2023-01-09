@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkapplication_services_ui=self.webpackChunkapplication_services_ui||[]).push([[6210,9557],{17558:(c,I,a)=>{a.d(I,{Dv:()=>t,Kf:()=>i,wt:()=>n});var e="@@INSIGHTS-CORE/NOTIFICATIONS/",t="".concat(e,"ADD_NOTIFICATION"),i="".concat(e,"REMOVE_NOTIFICATION"),n="".concat(e,"CLEAR_NOTIFICATIONS")},21458:(c,I,a)=>{a.d(I,{wN:()=>t});var e=a(17558),t=function(c){return{type:e.Dv,payload:c}}}}]);
-//# sourceMappingURL=6210.315845657c000b8c8ebb.js.map
