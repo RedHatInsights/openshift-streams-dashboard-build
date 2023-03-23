@@ -1,11 +1,15 @@
 {
     "applicationServices": {
         "entry": [
-            "/beta/apps/application-services/applicationServices.83e098d37dc2b553890d.js"
+            "/apps/application-services/applicationServices.860980eb8172a6fbf8b6.js"
         ],
         "modules": [
-            "/beta/apps/application-services/6fa5792f.css",
-            "/beta/apps/application-services/4906.391edfe0048cded75c09.js"
+            "/apps/application-services/f0272a77.css",
+            "/apps/application-services/2623.a2b992825f9c7cd67c4a.js",
+            "/apps/application-services/f0272a77.css",
+            "/apps/application-services/1956.9806199d2c1bd12e8889.js",
+            "/apps/application-services/f0272a77.css",
+            "/apps/application-services/305.3156b31ed97febe36cf4.js"
         ]
     }
 }
